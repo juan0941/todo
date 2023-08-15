@@ -1,0 +1,137 @@
+.item {
+  padding: 0.5rem 0 0.75rem 0;
+  text-align: left;
+  font-size: 1.2rem;
+
+
+}
+
+
+.btn-wrapper {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgb(0, 255, 179)99%);
+  height: 30px;
+  border-radius: 17px;
+}
+
+.btn {
+  /* menu buttons flexbox styles */
+  flex-basis: 7%;
+ background-color: rgb(180, 108, 247);
+ border-radius: 17px;
+ border: rgb(146, 116, 255);
+
+}
+
+
+.btn-save {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.btn-save:hover {
+  background-color: #444242;
+}
+
+.btn-save:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+.checkbox-wrapper {
+  margin: 0.5rem 0;
+}
+
+.btn-warn {
+  background-color:  rgb(180, 108, 247);
+border-radius: 17px;
+  color: black;
+  border-color: #9a0000;
+}
+
+.btn-warn:hover {
+  background-color: #9a0000;
+  color:white;
+}
+
+.btn-warn:active {
+  color: white;
+  background-color: #e30000;
+  border-color: #000;
+}
+
+.sm-text-input {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: #ffffff;
+  height: 25px;
+  border-radius: 17px;
+  border: white;
+  font-size: 18px;
+}
+.sm-text-input:active{
+background-color: #b179f1;
+color: #000;
+border-color: #760dee;
+}
+
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  display: none;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  cursor: pointer;
+  padding-left: 25px;
+  border: none;
+  position: relative;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  border: 2px solid rgb(146, 116, 255);
+  border-radius: 25px;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "🟣";
+  position: absolute;
+  top: -0.1em;
+  left: -0.3em;
+  font-size: 25px;
+  line-height: 0.8;
+  color: #760dee;
+  transition: all 0.2s;
+  font-family: "Lucida Sans Unicode", "Arial Unicode MS", Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted #b179f1;
+}
